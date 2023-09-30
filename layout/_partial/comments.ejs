@@ -115,3 +115,29 @@
   <% } %>
 
 <% } %>
+
+<% if (theme.comments.enable && theme.comments.giscus.enable) { %>
+  <div id="giscus-comments"></div>
+  <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+      const HEAD = document.getElementById("giscus-comments");
+      if (!HEAD) return;
+      const script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.setAttribute('data-repo', '<%- theme.comments.giscus.repo %>');
+      script.setAttribute('data-repo-id', '<%- theme.comments.giscus.repoId %>');
+      script.setAttribute('data-category', '<%- theme.comments.giscus.category %>');
+      script.setAttribute('data-category-id', '<%- theme.comments.giscus.categoryId %>');
+      script.setAttribute('data-mapping', '<%- theme.comments.giscus.mapping %>');
+      script.setAttribute('data-strict', '<%- theme.comments.giscus.strict %>');
+      script.setAttribute('data-emit-metadata', '<%- theme.comments.giscus.emitMetadata %>');
+      script.setAttribute('data-reactions-enabled', '<%- theme.comments.giscus.reactionsEnabled %>');
+      script.setAttribute('data-input-position', '<%- theme.comments.giscus.inputPosition %>');
+      script.setAttribute('data-theme', '<%- theme.comments.giscus.theme %>');
+      script.setAttribute('data-lang', '<%- theme.comments.giscus.lang %>');
+      script.setAttribute('data-loading', '<%- theme.comments.giscus.loading %>');
+      script.setAttribute('crossorigin', '<%- theme.comments.giscus.crossorigin %>');
+      HEAD.appendChild(script);
+    })();
+  </script>
+<% } %>

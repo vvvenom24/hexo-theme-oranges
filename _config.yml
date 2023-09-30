@@ -77,6 +77,23 @@ comments:
     enable: false
     serverURL:
 
+  # giscus https://giscus.app/zh-CN
+  giscus:
+    enable: true
+    repo: vvvenom24/blog-giscuss
+    repoId: R_kgDOKY3zJw
+    category: Announcements
+    categoryId: DIC_kwDOKY3zJ84CZpuq
+    mapping: title
+    strict: 0
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: bottom
+    theme: light
+    lang: zh-CN
+    loading: lazy
+    crossorigin: anonymous
+
 # 主题页面导航栏
 navbar:
   -
