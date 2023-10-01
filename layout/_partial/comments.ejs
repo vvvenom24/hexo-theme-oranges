@@ -123,6 +123,8 @@
       const HEAD = document.getElementById("giscus-comments");
       if (!HEAD) return;
       const script = document.createElement('script');
+      const html = document.documentElement;
+      let attr = html.getAttribute('color-mode');
       script.src = 'https://giscus.app/client.js';
       script.setAttribute('data-repo', '<%- theme.comments.giscus.repo %>');
       script.setAttribute('data-repo-id', '<%- theme.comments.giscus.repoId %>');
@@ -133,7 +135,7 @@
       script.setAttribute('data-emit-metadata', '<%- theme.comments.giscus.emitMetadata %>');
       script.setAttribute('data-reactions-enabled', '<%- theme.comments.giscus.reactionsEnabled %>');
       script.setAttribute('data-input-position', '<%- theme.comments.giscus.inputPosition %>');
-      script.setAttribute('data-theme', '<%- theme.comments.giscus.theme %>');
+      script.setAttribute('data-theme', attr);
       script.setAttribute('data-lang', '<%- theme.comments.giscus.lang %>');
       script.setAttribute('data-loading', '<%- theme.comments.giscus.loading %>');
       script.setAttribute('crossorigin', '<%- theme.comments.giscus.crossorigin %>');
