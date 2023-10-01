@@ -58,6 +58,18 @@
     </div>
   <% } %>
 
+  <% if(page.type === "guest") { %>
+    <!-- 留言页 url形式：https://yoursite/guestbook/ -->
+    <div class="container about-index">
+      <div class="markdown-body">
+        <%- page.content %>
+      </div>
+      <div class="comments-container" style="margin-top: 10rem;">
+        <%- partial("_partial/comments") %>
+      </div>
+    </div>
+  <% } %>
+
 <% if(page.type === "404") { %>
   <!-- 关于页 url形式：https://yoursite/404/ -->
   <div class="error-page">

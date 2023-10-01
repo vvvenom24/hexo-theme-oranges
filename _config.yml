@@ -21,13 +21,13 @@
 # 网站图标
 favicon:
   enable: true
-  icon: /images/favicon.png
-  touch_icon: /images/favicon.png
+  icon: /images/icon/apple-touch-icon.png
+  touch_icon: /images/icon/apple-touch-icon.png
 
 # 用户头像与昵称
 avatar:
-  author_photo: /images/avatar.png
-  author_nickname: Oranges
+  author_photo: /images/author_photo.jpeg
+  author_nickname: venom
   path: /
 
 # Google 分析
@@ -89,7 +89,6 @@ comments:
     reactionsEnabled: 1
     emitMetadata: 0
     inputPosition: bottom
-    theme: light
     lang: zh-CN
     loading: lazy
     crossorigin: anonymous
@@ -108,7 +107,7 @@ navbar:
     key: archives
   -
     name: Categories
-    enable: false
+    enable: true
     path: /categories/
     key: categories
   -
@@ -118,9 +117,14 @@ navbar:
     key: tags
   -
     name: Friends
-    enable: true
+    enable: false
     path: /friends/
     key: friends
+  -
+    name: Guest
+    enable: true
+    path: /guestbook/
+    key: guestbook
   -
     name: About
     enable: true
@@ -162,11 +166,11 @@ footer:
     -
       name: github
       icon: github
-      path: https://github.com/zchengsite/hexo-theme-oranges
-    # -
-    #   name: email
-    #   icon: envelope
-    #   path: 
+      path: https://github.com/vvvenom24
+    -
+      name: email
+      icon: envelope
+      path: mailto:venom24ch@gmail.com
     # -
     #   name: facebook
     #   icon: facebooksquare
@@ -196,7 +200,7 @@ footer:
     # 如：{thisYear} 会被替换为今年年份
     -
       name: Copyright © {thisYear} Oranges
-      path: https://github.com/zchengsite/hexo-theme-oranges
+      path: https://github.com/vvvenom24
     -
       name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges
@@ -204,7 +208,7 @@ footer:
   # 浏览量统计
   # http://busuanzi.ibruce.info/
   views:
-    enable: false
+    enable: true
     provider: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
     item:
       -
@@ -225,28 +229,28 @@ footer:
 
 # 文章搜索
 search:
-  enable: true
+  enable: false
   placeholder: 
 
 # 深/浅配色切换
 colorSwitch:
-  enable: true
+  enable: false
 
 # 文章分享
 postShare:
-  enable: true
+  enable: false
 
   twitter:
-    enable: true
+    enable: false
 
   facebook:
-    enable: true
+    enable: false
 
 # 代码块配置
 codeBlock:
   # 代码块风格，默认normal
   # 可选：默认风格'normal'；mac黑色风格：'mac-black'
-  style: 'normal'
+  style: 'mac-black'
   # 代码复制
   copy:
     enable: true
@@ -297,4 +301,4 @@ cdns:
       url: https://cdn.jsdelivr.net/npm/@waline/client@2.5.1/dist/legacy.min.js
 
 # 主题色
-themeColor: '#808080'
+themeColor: '#ed7d32'
