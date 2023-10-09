@@ -19,6 +19,25 @@ let fancyTimer = setInterval(function(){
         $(element).attr("href", $(this).attr("src"));
       }
       $(this).wrap(element);
+
+      // img add figcaption
+      if ($(this).attr("alt")) {
+        // Get the value of the 'alt' attribute
+        var altText = $(this).attr("alt");
+
+        // Create a <figcaption> element and set its text content
+        var figcaption = document.createElement("figcaption");
+        $(figcaption).text(altText);
+        $(figcaption).attr("style", "text-align: center;");
+
+        // Remove the 'alt' attribute from the img element
+        $(this).removeAttr("alt");
+
+        // Insert the <figcaption> element after the img element
+        $(this).after(figcaption);
+      } else {
+        // If 'alt' attribute is not present or empty, do nothing
+      }
     });
 
     clearInterval(fancyTimer);
