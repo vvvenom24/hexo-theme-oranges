@@ -40,10 +40,10 @@ body.hidden {
 
 /*控制整个滚动条*/
 ::-webkit-scrollbar {
-    background-color: transparent;
-    width: 6px;
-    height: 6px;
-    background-clip: padding-box;
+  background-color: transparent;
+  width: 6px;
+  height: 6px;
+  background-clip: padding-box;
 }
 
 /*滚动条中滑块部分*/
@@ -65,7 +65,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-text-a-hover);
+  color: orange;
 }
 
 .flex-container {
@@ -267,13 +267,15 @@ a:hover {
   bottom: 3px;
   left: 5px;
   height: 6px;
-  opacity: 0.45;
-  background-color: gray;
-  width: 89%;
+  opacity: 0.3;
+  background-color: orange;
+  width: 100%;
+  border-radius: 3px;
 }
 
 .navbar ul li.active a {
-  color: var(--color-text-a-active);
+  /*color: var(--color-text-a-active);*/
+  opacity: 1;
 }
 
 .navbar ul li.active a::after {
@@ -283,8 +285,9 @@ a:hover {
   left: 5px;
   height: 6px;
   opacity: 0.55;
-  background-color: gray;
-  width: 89%;
+  background-color: orange;
+  width: 100%;
+  border-radius: 3px;
 }
 
 @media (max-width: 888px) {
@@ -506,7 +509,7 @@ a:hover {
   bottom: 2px;
   width: 6px;
   height: 69%;
-  background-color: gray;
+  background-color: rgb(128, 128, 128);
   opacity: 0.45;
 }
 
@@ -517,7 +520,7 @@ a:hover {
   bottom: 2px;
   width: 6px;
   height: 69%;
-  background-color: gray;
+  background-color: rgb(128, 128, 128);
   opacity: 0.55;
 }
 
